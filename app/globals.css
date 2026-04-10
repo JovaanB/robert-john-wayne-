@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #C4944A;
+  --color-gold-light: #D4A862;
+  --color-gold-dark: #A67C35;
+  --color-charcoal: #0D0B09;
+  --color-charcoal-mid: #1A1614;
+  --color-charcoal-light: #2E2925;
+  --color-stone: #FAF8F4;
+  --color-stone-mid: #F0EBE3;
+  --color-stone-dark: #E2D9CD;
+  --color-muted: #7A7168;
+}
+
+:root {
+  --font-dm-serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-dm-sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF8F4;
+  color: #1A1614;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+.gold-bar {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: #C4944A;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #C4944A;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
